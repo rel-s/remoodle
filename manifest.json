@@ -10,9 +10,14 @@
       "48": "icons/border-48.png"
     },
   
-    "background":
-      {
-        "scripts": ["remoodle.js"]
-      }
+    "background": {
+        "scripts": ["remoodle.js"],
+        "persistent": true
+      },
+
+    "permissions": [
+        "alarms",
+        "*://moodle2.cs.huji.ac.il/*"
+    ]
   
   }
