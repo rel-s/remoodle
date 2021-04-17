@@ -1,6 +1,7 @@
 // init globals
-var REFRESH_DELAY   = 5; // minutes
-var MOODLE_AUTH_URL = "https://moodle2.cs.huji.ac.il/nu20/auth/saml/index.php";
+var REFRESH_DELAY               = 5; // minutes
+var MOODLE_AUTH_URL             = "https://moodle2.cs.huji.ac.il/nu20/auth/saml/index.php";
+var MOODLE_LOGGED_IN_REDIRECT   = "https://moodle2.cs.huji.ac.il/nu20/parent_reload.php";
 
 (function() {
 
@@ -16,7 +17,7 @@ var MOODLE_AUTH_URL = "https://moodle2.cs.huji.ac.il/nu20/auth/saml/index.php";
         fetch(MOODLE_AUTH_URL)
             .then(function (response) {
                 // log some stuff
-                if (response.url == "https://moodle2.cs.huji.ac.il/nu20/parent_reload.php") {
+                if (response.url == MOODLE_LOGGED_IN_REDIRECT) {
                     console.log("Login refreshed...");
                 } else {
                     console.log("Probably not logged in? Got url " + response.url);
