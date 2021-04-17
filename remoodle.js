@@ -4,10 +4,12 @@ var MOODLE_AUTH_URL             = "https://moodle2.cs.huji.ac.il/nu20/auth/saml/
 var MOODLE_LOGGED_IN_REDIRECT   = "https://moodle2.cs.huji.ac.il/nu20/parent_reload.php";
 
 (function() {
+    // we are using the chrome namespace instead of browser even though it is not standard,
+    // simply because Firefox supports these namespace and chrome is a bully.
 
     // setup alarm
-    browser.alarms.clearAll();
-    browser.alarms.onAlarm.addListener((alarm) => {
+    chrome.alarms.clearAll();
+    chrome.alarms.onAlarm.addListener((alarm) => {
         // sanity I guess
         if (alarm.name != "remoodle") {
             return;
@@ -29,6 +31,6 @@ var MOODLE_LOGGED_IN_REDIRECT   = "https://moodle2.cs.huji.ac.il/nu20/parent_rel
     });
     
     // start polling
-    browser.alarms.create("remoodle", {periodInMinutes: REFRESH_DELAY});
+    chrome.alarms.create("remoodle", {periodInMinutes: REFRESH_DELAY});
 
 })();
