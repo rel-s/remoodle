@@ -15,12 +15,14 @@ var MOODLE_LOGGED_IN_REDIRECT   = "https://moodle2.cs.huji.ac.il/nu20/parent_rel
             return;
         }
 
-        // just poll
-        fetch(MOODLE_AUTH_URL)
+        // just poll - I think an opaque response is ok here
+        fetch(MOODLE_AUTH_URL, {mode: "no-cors"})
             .then(function (response) {
                 // log some stuff
                 if (response.url == MOODLE_LOGGED_IN_REDIRECT) {
                     console.log("Login refreshed...");
+                } else if (!response.url) {
+                    console.log("Due to cors, can't see if logged in or not.");
                 } else {
                     console.log("Probably not logged in? Got url " + response.url);
                 }
