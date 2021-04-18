@@ -5,7 +5,7 @@
 
 ## Installation - התקנה - تثبيت
 [<img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" alt="Firefox icon" width="26"/> Firefox](https://addons.mozilla.org/addon/remoodle/)  
-[<img src="https://img.icons8.com/fluent/344/chrome.png" alt="chrome icon" width="26"/> Chrome](https://google.com)
+[<img src="https://img.icons8.com/fluent/344/chrome.png" alt="chrome icon" width="26"/> Chrome](https://chrome.google.com/webstore/detail/remoodle/fcimgcbkmeehfkmpdjehjaoplobdidnd)
 
 <div dir="rtl">
 
