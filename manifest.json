@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "remoodle",
-    "version": "1.0",
+    "version": "1.1",
   
     "description": "Refreshes moodle to keep you logged in.",
   
